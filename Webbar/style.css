@@ -1,0 +1,101 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.header {
+  background: rgb(46, 55, 71);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+}
+.title {
+  font-size: 24px;
+  color: white;
+}
+
+.title i {
+  color: burlywood;
+}
+
+.menu {
+  display: flex;
+  color: white;
+  padding-left: 0%;
+  list-style: none;
+}
+
+.menu li {
+  padding: 8px 24px;
+}
+
+.menu li:hover {
+  background-color: darksalmon;
+  border-radius: 8px;
+}
+.icons {
+  display: flex;
+  color: white;
+  list-style: none;
+}
+
+.icons li {
+  padding: 8px 12px;
+}
+
+.icons li:hover {
+  background-color: darksalmon;
+  border-radius: 8px;
+}
+
+.toggle {
+  display: none;
+  position: absolute;
+  right: 12px;
+  font-size: 24px;
+  color: darksalmon;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .title {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .icons {
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 24px;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .menu.active,
+  .icons.active {
+    display: flex;
+  }
+}
